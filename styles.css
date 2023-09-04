@@ -1,0 +1,171 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #24145e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes shrinkAndGrow {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes expandHorzontal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes appearFromBottom {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shakingUpDown {
+  from {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(7px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  75% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes numberHide {
+  to {
+    transform: translateY(-250px) scale(0);
+  }
+}
+
+@keyframes closeBeam {
+  to {
+    transform: scaleX(0);
+  }
+}
+
+#planet_2 {
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#planet_1 {
+  animation-name: rotation;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star_1 {
+  animation-name: shrinkAndGrow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+#star_5 {
+  animation-name: shrinkAndGrow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+#star_3 {
+  animation-name: shrinkAndGrow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+#star_6 {
+  animation-name: shrinkAndGrow;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+#star_7 {
+  animation-name: shrinkAndGrow;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#UFO-beam {
+  animation-name: expandHorzontal;
+  animation-duration: 3s;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#number-0 {
+  animation-name: appearFromBottom;
+  animation-duration: 2s;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#alien_hand-L,
+#alien_hand-R {
+  animation: shakingUpDown 3s infinite;
+  animation-timing-function: cubic-bezier(0.12, 1.53, 0.77, -0.33);
+}
+
+#number-0-hide {
+  animation-name: numberHide;
+  animation-duration: 1s;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#UFO-beam-hide {
+  animation-name: closeBeam;
+  animation-duration: 2s;
+  transform-box: fill-box;
+  transform-origin: center;
+}
